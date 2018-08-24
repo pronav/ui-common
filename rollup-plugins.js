@@ -41,7 +41,7 @@ const getPluginsWithShared = sharedDir => baseDir => {
   ];
 };
 
-const pluginsWithDir = getPluginsWithShared('node_modules/static/src');
+const pluginsWithDir = getPluginsWithShared('node_modules/ui-common/src');
 
 const rollupCommon = {
   treeshake: {

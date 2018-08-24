@@ -17,6 +17,7 @@ function transform(content, id) {
 
       stylus.render(content, stylusOptions, (err, code) => {
         if (err) { return reject(err) }
+        code = `export default ${JSON.stringify(code)};`;
         resolve({ code, map: { mappings: '' } });
       });
     });

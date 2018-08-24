@@ -1,7 +1,7 @@
 const fs = require('fs');
 const { execSync } = require('child_process');
 const globalContents = fs
-  .readFileSync(__dirname + '/../src/shared/implicit/global.js')
+  .readFileSync(__dirname + '/../src/implicit/global.js')
   .toString();
 
 const globalInjects = globalContents
@@ -9,7 +9,7 @@ const globalInjects = globalContents
   .map(a => a.slice(13));
 
 let injects = {
-  // fetch: 'implicit/fetch',
+  fetch: 'implicit/fetch',
   _: ['implicit/_', '*'],
   Promise: 'implicit/Promise',
   _Arr: ['implicit/_Arr', '*'],
